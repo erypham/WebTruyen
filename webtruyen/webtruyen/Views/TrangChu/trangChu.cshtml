@@ -1,0 +1,234 @@
+﻿@using webtruyen.Models
+
+@{
+    ViewBag.Title = "trangChu";
+    Layout = "~/Views/Shared/_UseLayout.cshtml";
+}
+
+@{ IEnumerable<TRUYEN> listTruyenMoiNhat = (IEnumerable<TRUYEN>)ViewBag.ListTruyenMoiNhat; }
+@{ IEnumerable<TRUYEN> listTruyenFull = (IEnumerable<TRUYEN>)ViewBag.ListTruyenFull; }
+@{ IEnumerable<TRUYEN> listTruyenSangTac = (IEnumerable<TRUYEN>)ViewBag.ListTruyenSangTac; }
+
+<section class="deal">
+
+    <div class="content">
+        <h3>Truyện hot</h3>
+        <h1>Cổ kiếm đồ ma lục</h1>
+        <p>Nguyệt Quan, ngự Kiếm Cửu châu, thần Du Hồng Hoang, ma Tôn Thận Cổ,tiên Ma Đại Chiến,hồng Liên Nghiệp Hỏa, trả lại nàng một thân sạch sẽ,đông Hải Trường Lưu, đằng hắn hiên ngang ý chí, thục Sơn trở về, lại đúc Đệ Nhất Tiên Tông!</p>
+        <a href="#" class="btn">Đọc ngay</a>
+    </div>
+
+    <div class="image">
+        <img src="~/Content/UseLayout/image/tienhiep1.jpg" alt="">
+    </div>
+
+</section>
+
+<section class="featured" id="moicapnhat">
+
+    <h1 class="heading"> <span>Truyện sáng tác</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+            @Html.Partial("truyenPartial", listTruyenSangTac)
+        </div>
+        <!--button sang left right-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section starts  -->
+
+<section class="featured" id="moicapnhat">
+
+    <h1 class="heading"> <span>Truyện mới nhất</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            @Html.Partial("truyenPartial", listTruyenMoiNhat)
+
+        </div>
+        <!--button sang left right-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+<!-- newsletter section starts -->
+
+<section class="newsletter">
+
+    <form action="">
+        <h3>Đăng ký để cập nhật truyện mới nhất</h3>
+
+        <input type="submit" value="Đăng ký" class="btn">
+    </form>
+
+</section>
+
+<!-- newsletter section ends -->
+<!-- arrivals section starts  -->
+
+<section class="truyenfull" id="truyenfull">
+
+    <h1 class="heading"> <span>Truyện full</span> </h1>
+
+    <div class="swiper truyenfull-slider">
+
+        <div class="swiper-wrapper">
+
+            @Html.Partial("truyenPartial", listTruyenFull)
+
+        </div>
+        <!--button sang left right-->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+<!-- arrivals section ends -->
+<!-- reviews section starts  -->
+
+<section class="tacgia" id="tacgia">
+
+    <h1 class="heading"> <span>Tác giả nổi bậc</span> </h1>
+
+    <div class="swiper tacgia-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <img src="image/WEBBOOK.png" alt="">
+                <h3>Đường Gia Tam Thiếu</h3>
+                <p>Tác giả Đường Gia Tam Thiếu có tên thật là Trương Uy. Sinh ngày 10/1/1981 tại Bắc Kinh, là một nhà văn mạng nhiều người biết đến của trung hoa. Hiện giờ anh là chủ tịch tổ chức TNHH văn hóa Huyễn Thế Đường Môn.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="~/Content/UseLayout/image/WEBBOOK.png" alt="">
+                <h3>Tạ Quang Khải</h3>
+                <p>Tác giả có tên thật là Tạ Quang Khải. Sinh ngày 24/10/1980 tại Vân Nam. Lá một trong những nhà văn nổi tiếng của nhiều thể loại truyện trong đó có truyện trinh thám.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="~/Content/UseLayout/image/WEBBOOK.png" alt="">
+                <h3>Hắc Sơn Lão Quỷ</h3>
+                <p>Tác giả có tên thật là Hắc Lão. Sinh ngày 19/10/1982 tại Bắc Kinh.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="~/Content/UseLayout/image/WEBBOOK.png" alt="">
+                <h3>Ngốc Tiểu Ngư</h3>
+                <p>Tác giả có tên thật là Tiểu Ngư. Sinh ngày 19/10/1982 tại Hà Nam. Lá một trong những nhà văn nổi tiếng của truyện kiếm hiệp.</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <img src="~/Content/UseLayout/image/WEBBOOK.png" alt="">
+                <h3>Tiểu Nguyệt</h3>
+                <p>Tác giả có tên thật là Tô Tiểu Nguyệt. Sinh ngày 02/08/1997 tại Bắc Kinh. Được biết đến với nhiều thể loại truyện như; ngôn tình, xuyên không..</p>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- reviews section ends -->
+<!-- deal section starts  -->
+<!-- footer section starts  -->
+
+<section class="footer" id="chuongtruyen">
+    <h1 class="heading"> <span>Chương truyện</span> </h1>
+    <div class="box-container">
+
+        <div class="box">
+            <h3>Đấu la đại lục</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 1 </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 2 </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 3 </a>
+
+        </div>
+
+        <div class="box">
+            <h3>Cửu vực tiên vương</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 1: Sinh tử lựa chọn </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 2: Mộc rễ nảy mầm </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 3 </a>
+
+        </div>
+
+        <div class="box">
+            <h3>Mặt trăng đỏ</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 1: Hồng nguyệt xuất hiện </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 2: Gia đình </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 3: Nhân viên văn phòng </a>
+
+        </div>
+
+        <div class="box">
+            <h3>Âu lạc</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 1: Lạc long quân </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> Chương 2: Xích quỹ</a>
+
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credit"> Tạo bởi <span>Ghiền truyện</span> | Đã đăng ký bản quyền </div>
+
+</section>
+
+

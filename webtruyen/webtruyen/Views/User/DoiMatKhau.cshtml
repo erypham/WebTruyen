@@ -1,0 +1,65 @@
+﻿@model webtruyen.Models.ChangePasswordModel
+@{
+    ViewBag.Title = "DoiMatKhau";
+    Layout = "~/Views/Shared/_loginLayout.cshtml";
+}
+
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-6 d-none d-lg-block bg-login-image"></div>
+                        <div class="col-lg-6">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                </div>
+                                @using (Html.BeginForm("DoiMatKhau", "User", FormMethod.Post))
+                                {
+                                    @Html.AntiForgeryToken()
+                                    <div class="form-horizontal">
+                                        <hr />
+                                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                                        <form class="user">
+
+                                            <div class="form-group">
+                                                <input type="password" name="Password" class="form-control form-control-user"
+                                                       placeholder="Old Password">
+                                                @Html.ValidationMessageFor(model => model.Password, "", new { @class = "text-danger" })
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="password" name="newPassword" class="form-control form-control-user"
+                                                       placeholder="New Password">
+                                                @Html.ValidationMessageFor(model => model.newPassword, "", new { @class = "text-danger" })
+                                            </div>
+
+                                            <div class="form-group">
+                                                <input type="password" name="confirmNewPassword" class="form-control form-control-user"
+                                                       placeholder="Confirm New Password">
+                                                @Html.ValidationMessageFor(model => model.confirmNewPassword, "", new { @class = "text-danger" })
+                                            </div>
+
+                                            <input type="submit" value="Đổi Mật Khẩu" class="btn btn-primary btn-user btn-block">
+                                            <hr />
+                                            @ViewBag.Fail
+
+                                    </div>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>

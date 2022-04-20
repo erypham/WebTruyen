@@ -1,0 +1,19 @@
+﻿@using webtruyen.Models
+@model IEnumerable<TRUYEN>
+
+@foreach (var groupItem in Model)
+{
+    <ul class="w3-ul w3-row">
+
+        <li class="w3-col s6 m6 l6">
+            <i class="fa fa-tags w3-text-red"></i>
+            <b>
+
+                <a class="w3-text-red" href="@Url.Action("lstTruyen","TrangChu", new { @matl = groupItem.MATHELOAI })">@groupItem.THELOAI.TENTHELOAI</a>
+
+
+            </b>
+        </li>
+
+    </ul>
+}

@@ -1,0 +1,21 @@
+﻿@using webtruyen.Models
+@model IEnumerable<TRUYEN>
+
+
+@foreach (var item in Model)
+{
+    <div class="swiper-slide box">
+        <div class="icons">
+            <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-eye"></a>
+        </div>
+        <div class="image">
+            <img src="@Url.Content("~/Content/Hinh/" + item.HINHANH)" alt="" style="width: 150px;height: 200px">
+        </div>
+        <div class="content">
+            <h3>@item.TENTRUYEN</h3>
+            <a href="@Url.Action("Details","TrangChu", new { @matruyen = item.MATRUYEN })" class="btn">Đọc ngay</a>
+        </div>
+
+    </div>
+}

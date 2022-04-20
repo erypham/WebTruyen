@@ -1,0 +1,247 @@
+﻿@model webtruyen.Models.TRUYEN
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_UseLayout.cshtml";
+}
+
+<div class="container">
+
+    <section class="deal">
+
+        <div class="image">
+            <img src="~/Content/HINH/@Html.DisplayFor(model => model.HINHANH)" width="150px" height="500px" />
+
+
+        </div>
+        <div class="content">
+
+            <h1>@Html.DisplayFor(model => model.TENTRUYEN)</h1>
+            <p>Tác giả: <a itemprop="author" class="rv-sr-a" href="/tac-gia/duong-gia-tam-thieu" title=" Đường gia tam thiếu"> @Html.DisplayFor(model => model.TACGIA.TEN_TG)</a></p>
+            <p>
+                Thể loại: <a itemprop="genre" class="rv-sr-a" href="#" title="Ngôn Tình">@Html.DisplayFor(model => model.THELOAI.TENTHELOAI)</a>
+            </p>
+            <p>Nguồn: <span class="rv-sr-s-a">@Html.DisplayFor(model => model.NGUON)</span></p>
+            <!--  <p> Đã 27 tuổi nhưng đại thiếu gia Lục thị lại chẳng hề rung động vì bất kỳ một cô gái nào nên cha mẹ cùng em trai đã chuốc say anh rồi đưa lên giường một cô gái xa lạ.<br><br>Năm năm sau, tiểu thiếu gia&nbsp;Lục Kình Vũ&nbsp;vì không có mẹ và shock quá khứ nên đã rơi vào trầm cảm.<br><br>Một người cha chưa từng có cảm giác rung động trước bất kỳ ai và một thằng bé con "không thích tiếp xúc với bất kỳ ai" đã trở nên "lầy lội" hơn bao giờ hết khi gặp được Ninh Tịch.<br><br>Cả hai cha con đều vừa gặp đã yêu người phụ nữ này, một người mong muốn chiếm hữu, một người vô cùng ỷ lại, cuối cùng tạo ra những tình huống dở khóc dở cười cho độc giả.<br><br>Truyện luôn đứng Top 1 SSTruyen 2019. Thân mời các bạn đọc!</p>-->
+            <a href="https://localhost:44341/TrangChu/DetailChuong?machuong=1" class="btn">Đọc ngay</a>
+        </div>
+    </section>
+    <section class="details">
+        <h1 class="heading"> <span>Giới thiệu</span> </h1>
+        <div class="details-truyen">
+            <p>
+                @Html.DisplayFor(model => model.MOTA)
+            </p>
+        </div>
+    </section>
+    <h1 class="heading"> <span>Chương truyện</span> </h1>
+    <section class="chap">
+
+        <div class="box-container" id="chuongtruyen">
+            <div class="box">
+                <h3>Danh sách chương</h3>
+                @Html.Action("chTruyenPartial", "TrangChu")
+
+            </div>
+
+
+
+        </div>
+        <div class="main-chap">
+
+        </div>
+    </section>
+    <h1 class="heading"> <span>Gợi ý truyện</span> </h1>
+    <section class="truyensangtac" id="truyensangtac">
+
+
+
+        <div class="swiper truyensangtac-slider">
+
+            <div class="swiper-wrapper">
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/dauladailuc.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Đấu la đại lục</h3>
+                        <div class="tacgia">Đường Gia Tam Thiếu</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/mattrangdo.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Mặt trăng đỏ</h3>
+                        <div class="tacgia">Hắc Sơn Lão Quỷ</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/dequan.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Đế quân</h3>
+                        <div class="tacgia">Đế quân</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/docsunghaucung.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Độc sủng hậu cung</h3>
+                        <div class="tacgia">Yến Linh Quân Phó Hào</span></div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/dongxuongtruyenki.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Đông xưởng truyền kì</h3>
+                        <div class="tacgia">Tạ Quang Khải</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/hoanghauluoi.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Hoàng hậu lười</h3>
+                        <div class="tacgia">Tiểu Nguyệt</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/honghoangvirustuthan.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Hồng Hoang - Virus Tử Thần</h3>
+                        <div class="tacgia">Tạ Quang Khải</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/thonthiencode.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Thiên cố đế</h3>
+                        <div class="tacgia">Hắc Sơn Lão Quỷ</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/cokiemdomaluc.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Cổ kiếm đồ ma lục</h3>
+                        <div class="tacgia">Nguyệt Quang</span></div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+                <div class="swiper-slide box">
+                    <div class="icons">
+
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-eye"></a>
+                    </div>
+                    <div class="image">
+                        <img src="image/cuuvucthienvuong.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <h3>Cửu vực thiên vương</h3>
+                        <div class="price">Yến Linh Phó Hào</div>
+                        <a href="#" class="btn">Đọc ngay</a>
+                    </div>
+                </div>
+
+            </div>
+            <!--button sang left right-->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+
+        </div>
+
+    </section>
+
+    <section class="footer" id="chuongtruyen">
+
+
+        <div class="share">
+            <a href="#" class="fab fa-facebook-f"></a>
+            <a href="#" class="fab fa-twitter"></a>
+            <a href="#" class="fab fa-instagram"></a>
+            <a href="#" class="fab fa-linkedin"></a>
+            <a href="#" class="fab fa-pinterest"></a>
+        </div>
+
+        <div class="credit"> Tạo bởi <span>Ghiền truyện</span> | Đã đăng ký bản quyền </div>
+
+    </section>
+</div>

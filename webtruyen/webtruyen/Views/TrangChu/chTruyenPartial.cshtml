@@ -1,0 +1,7 @@
+﻿@using webtruyen.Models
+@model IEnumerable<CHUONGTRUYEN>
+
+@foreach (var item in Model)
+{
+    <a href="@Url.Action("DetailChuong","TrangChu", new { @machuong = item.MACHUONG })"> <i class="fas fa-arrow-right"></i>@item.TENCHUONG @item.TENPHU </a>
+}

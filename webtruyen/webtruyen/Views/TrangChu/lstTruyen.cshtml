@@ -1,0 +1,95 @@
+﻿@using webtruyen.Models
+@model IEnumerable<TRUYEN>
+
+@{
+    ViewBag.Title = "lstTruyen";
+    Layout = "~/Views/Shared/_UseLayout.cshtml";
+}
+
+<div id="main" class="w3-row">
+    <div class="w3-round sitemap" itemscope="" itemtype="http://data-vocabulary.org/BreadcrumbList">
+        <div style="float: left;" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="1">
+            <a href="~/TrangChu/trangChu" title="Trang chủ" itemprop="item" itemtype="http://schema.org/Thing">
+                <span itemprop="name">
+                    <i class="fa fa-home"></i>
+                    Trang chủ
+                </span>
+            </a>
+            <i class="fa fa-angle-right"></i>
+        </div>
+        <div style="float: left;" itemprop="itemListElement" itemscope="" itemtype="http://schema.org/ListItem">
+            <meta itemprop="position" content="2">
+            <a href="" title="Tiên hiệp" itemprop="item" itemtype="http://schema.org/Thing">
+                <span itemprop="name">
+                    Tiên hiệp
+                </span>
+            </a>
+        </div>
+        <div class="clear"></div>
+        <div id="list" class="w3-col s12 m12 l8 w3-container">
+            <!-- LIST STORY -->
+            <div class="list-update">
+                <div class="w3-row list-title">
+                    <div class="title-left"><h2><a title="Tiên hiệp" href="#">Tiên hiệp <i class="fa fa-angle-right"></i></a></h2></div>
+                    <div class="title-right">
+                        <a title="Truyện full" href="#">Truyện full</a> <i class="fa fa-circle"></i>
+                        <a title="Truyện mới cập nhật" href="#">Mới cập nhật</a> <i class="fa fa-circle"></i>
+                        <a title="Truyện sáng tác" href="#">Truyện sáng tác</a>
+                    </div>
+                </div>
+                <div class="w3-row list-content" id="loadmore">
+                   
+                    @Html.Action("lstTruyenPartial", "TrangChu")
+
+
+                    <div id="last"></div>
+                </div>
+                <div id="sidebar" class="w3-col s12 m12 l4 sidebar w3-container">
+                    <!-- CATEGORY -->
+                    <div class="w3-col s12 m12 l12 sidebar-list sidebar-category">
+                        <div class="sidebar-title"><h2>THỂ LOẠI TRUYỆN <i class="fa fa-angle-right"></i></h2></div>
+                        <div class="sidebar-content">
+                            
+                            @Html.Action("ds_theloai2", "TrangChu")
+                        </div>
+                    </div>
+                    <div class="w3-row">
+                        <div class="w3-col s12 m12 l12 sidebar-list sidebar-top">
+                            <div class="w3-row sidebar-title"><h2>TRUYỆN HAY <i class="fa fa-angle-right"></i></h2></div><div class="sidebar-row">
+                                <div class="box-container" id="chuongtruyen">
+                                    <div class="box">
+
+                                        <a href="#">
+                                            <i class="fas fa-arrow-right"></i>Đấu la đại lục
+                                            <span class="row-author"><i class="fa fa-user"></i>Đường gia tam thiếu</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-arrow-right"></i>Đấu la đại lục
+                                            <span class="row-author"><i class="fa fa-user"></i>Đường gia tam thiếu</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-arrow-right"></i>Đấu la đại lục
+                                            <span class="row-author"><i class="fa fa-user"></i>Đường gia tam thiếu</span>
+                                        </a>
+                                        <a href="#">
+                                            <i class="fas fa-arrow-right"></i>Đấu la đại lục
+                                            <span class="row-author"><i class="fa fa-user"></i>Đường gia tam thiếu</span>
+                                        </a>
+                                    </div>
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

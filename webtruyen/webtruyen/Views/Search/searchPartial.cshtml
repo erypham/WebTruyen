@@ -1,0 +1,21 @@
+﻿@using webtruyen.Models
+@model IEnumerable<TRUYEN>
+
+
+@foreach (var item in Model)
+{
+    <div class="w3-row list-row-img" itemscope="" itemtype="https://schema.org/Book">
+        <div class="w3-col s2 m2 l2 row-image">
+            <div>
+                <a href="@Url.Action("Details","TrangChu", new { @matruyen = item.MATRUYEN })" title="Đấu la đại lục" itemprop="url"><img itemprop="image" src="@Url.Content("~/Content/Hinh/" + item.HINHANH)" alt="Đấu la đại lục" width="55" height="70"></a>
+            </div>
+        </div>
+        <div class="w3-col s7 m7 l7 row-info">
+            <div>
+                <h3><a href="@Url.Action("Details","TrangChu", new { @matruyen = item.MATRUYEN })" title="Đấu la đại lục" itemprop="name">@item.TENTRUYEN</a></h3>
+                <!--<span class="new-icon"></span>-->
+                <span class="row-author"><i class="fa fa-user"></i>@item.TACGIA.TEN_TG</span>
+            </div>
+        </div>
+    </div>
+}

@@ -1,0 +1,34 @@
+﻿@using webtruyen.Models
+@model IEnumerable<TRUYEN>
+
+<div class="header-2">
+    <nav class="navbar">
+        <li><a href="~/TrangChu/trangChu" title="Trang chủ">Trang chủ</a></li>
+        <li class="dropdown">
+            <a href="#" title="Thể loại">Thể loại</a>
+            <div class="dropdown-content">
+                @foreach (var groupItem in Model)
+                {
+                    <a href="@Url.Action("lstTruyen","TrangChu", new { @matl = groupItem.MATHELOAI })">@groupItem.THELOAI.TENTHELOAI</a>
+                }
+            </div>
+        </li>
+        <li><a href="#truyenfull" title="Truyện full">Truyện full</a></li>
+        <li><a href="#moicapnhat" title="Truyện mới cập nhật">Mới cập nhật</a></li>
+        <li><a href="#chuongtruyen" title="Chương truyện">Chương truyện</a></li>
+        <li><a href="#tacgia" title="Tác giả">Tác giả</a></li>
+        <li><a href="#truyensangtac" title="truyensangtac">Truyện Sáng tác</a></li>
+
+        <!--   <li class="dropdown">
+               <a href="#tacgia" title="Tùy chọn" class="fas fa-list"></a>
+               <div class="dropdown-content">
+                   <a href="#"> Truyện chất lượng cao</a>
+                   <a href="#"> Truyện mới đăng</a>
+                   <a href="#"> Truyện đề xuất</a>
+
+               </div>
+           </li>
+           -->
+
+    </nav>
+</div>

@@ -1,0 +1,87 @@
+﻿@model webtruyen.Models.CHUONGTRUYEN
+
+@{
+    ViewBag.Title = "DetailChuong";
+    Layout = "~/Views/Shared/_UseLayout.cshtml";
+}
+
+</script>--->
+<section id="content-wrapper">
+    <div class="container">
+        <div class="content-home-wrapper col-sm-8 col-md-9">
+            <div class="portlet" id="yw2">
+                <div class="portlet-content">
+                    <div class="main-breadcrumb">
+                        <h5>
+                            
+                        </h5>
+                    </div>
+                </div>
+            </div>
+            <div id="content-home" class="content-inner">
+                <div class="story-detail content-inner">
+                    <div class="story-detail-header">
+                        <div id="adv-bottom " style="float:left;width:100%" class="hidden-md hidden-sm hidden-lg">
+                            <di class="hidden-lg ">
+                                <!-- Quảng cáo -->
+                            </di>
+                        </div>
+                        <h1 style="float:left;width:100%" class="story-detail-title text-center">@Html.DisplayFor(model => model.TENCHUONG)</h1>
+                        <p class="story-detail-author text-center">
+               
+                            <a href="#"> @Html.DisplayFor(model => model.TENPHU)</a>
+                        </p>
+                        <div class="text-center">
+                            <select class="select-story selectpicker text-center" data-style="btn-primary" onchange="top.location.href=this.options[this.selectedIndex].value;">
+                                
+                            </select>
+                        </div>
+                        <!-- Quảng cáo đầu bài-->
+                        <br>
+                    </div>
+                    <form name="bookmark" onsubmit="return false;" id="bookmarkForm" method="post" action="https://thichtruyen.vn/comment/post">
+
+                        <input type="hidden" id="post_id" name="post_id" value="237462">
+                        <input type="hidden" id="post_alias" name="post_alias" value="the-than-tu-choi-chuyen-chinh-thuc-chuong-01">
+                        <input type="hidden" id="type" name="type" value="0">
+
+
+                        <div class="story-detail-content">
+                            <div style="float:right;margin:10px 10px 10px 0;">
+                                <div class="hidden-xs hidden-md hidden-sm">
+                                    <!--Quảng Cáo PC-->
+                                </div>
+                            </div>
+                            <p>
+                                <b>@Html.DisplayFor(model => model.TENCHUONG)|@Html.DisplayFor(model => model.TENPHU)</b>
+                                <br>Edit + Beta: Ruby<br>---------------------<br>
+                                <span></span>
+                            </p>
+                            <p>@Html.DisplayFor(model => model.NOIDUNG)</p>
+                            <p></p>
+                        </div>
+                        <br><br>
+                        <div class="story-detail-footer">
+                            <div class="next-previous pull-left">
+                                <a href="https://localhost:44341/TrangChu/DetailChuong?machuong=2" class="btn btn-default pull-right">Chương tiếp<i class="glyphicon glyphicon-menu-right"></i><i class="glyphicon glyphicon-menu-right"></i></a> <!--Quảng Cáo Tự Động-->
+                            </div>
+                            <div class="text-center">
+                            </div>
+                            <p class="text-center">
+                                <select class="select-story selectpicker text-center" data-style="btn-primary" onchange="top.location.href=this.options[this.selectedIndex].value;">
+
+                                    <option value="/doc-truyen/the-than-tu-choi-chuyen-chinh-thuc-chuong-01" selected="selected">@Html.DisplayFor(model => model.TENCHUONG) </option>
+                                    
+
+                                </select>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+
+                <!--<h3><b><font color="#ff0000">Được tài trợ:</font></b></h3>-->
+
+
+
+                <br>
+                <br>
